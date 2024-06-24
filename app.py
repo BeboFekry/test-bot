@@ -2,8 +2,7 @@ import requests
 from flask import Flask, request, jsonify
 import numpy as np
 import tensorflow as tf
-# from tf.keras.models import load_model
-from tf.keras.utils import img_to_array
+from tensorflow.keras.utils import img_to_array
 
 url = "https://drive.google.com/uc?id=1MTntYoyzv_Y2veMiC90eQqwF8m7GYJmM"
 model = requests.get(url)
