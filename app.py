@@ -26,9 +26,9 @@ app = Flask(__name__)
 @app.route('/predict',methods=['POST'])
 def predict():
     img = request.files['file']
-    img = rescale(img)
     img.save("img.jpg")
     img = load_img("img.jpg")
+    img = rescale(img)
     output = pred(model,img).argmax()
     return jsonify(output)
 
