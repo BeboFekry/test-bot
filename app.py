@@ -1,8 +1,9 @@
 import requests
 from flask import Flask, request, jsonify
 import numpy as np
+from PIL import Image
 import tensorflow as tf
-from tensorflow.keras.utils import img_to_array, load_img
+from tensorflow.keras.utils import img_to_array
 
 url = "https://drive.google.com/uc?id=1MTntYoyzv_Y2veMiC90eQqwF8m7GYJmM"
 model = requests.get(url)
@@ -25,9 +26,10 @@ app = Flask(__name__)
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    img = request.files['file']
-    img.save("img.jpg")
-    img = load_img("img.jpg", target_size=(224, 224))
+    image = request.files['file']
+    image.save("img.jpg")
+    img = Image.open('img.jpg')
+    img = img.resize((224, 224))
     img = rescale(img)
     output = pred(model,img).argmax()
     return jsonify(output)
