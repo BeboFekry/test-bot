@@ -7,6 +7,10 @@ from tensorflow.keras.utils import img_to_array
 
 url = "https://drive.google.com/uc?id=1MTntYoyzv_Y2veMiC90eQqwF8m7GYJmM"
 model = requests.get(url)
+with open("model.tflite", 'wb') as f:
+    f.write(model.content)
+model = tf.lite.Interpreter(model_path="model.tflite")
+model.allocate_tensors()
 
 def rescale(img):
     img2 = img_to_array(img)
