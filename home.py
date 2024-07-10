@@ -23,16 +23,10 @@ It also can recognize 101 food types from images and shows the approximate numbe
 Module 3: An ensemble Machine Learning (Random Forest) Model for scan Electrocardiography ECG and diagnosis the heart diseases.
 """)
 
-
 chat = st.Page("chatbot.py", title="Chatbot", icon=":material/smart_toy:")
 scan = st.Page("scan.py", title="Scan", icon=":material/radiology:")
 ecg = st.Page("ecg.py", title="ECG Scan", icon=":material/ecg_heart:")
-mbti = st.Page("mbti.py", title="mbti", icon=":material/psychology:")
-
-# scan = st.link_button("Scan","https://icarescan2.streamlit.app/")
-# chat = st.link_button("Chatbot","https://carolinebot.streamlit.app/")
-# ecg = st.link_button("ECG","https://icareecgscan.streamlit.app/")
-# mbti = st.link_button("MBTI","https://icarembti.streamlit.app/")
+mbti = st.Page("mbti.py", title="MBTI", icon=":material/psychology:")
 
 pg = st.navigation([chat, scan, ecg, mbti])
 pg.run()
