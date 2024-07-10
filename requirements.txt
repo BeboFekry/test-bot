@@ -1,7 +1,5 @@
 streamlit
 numpy
-junicorn
-joblib
 pandas
 matplotlib
 Pillow
