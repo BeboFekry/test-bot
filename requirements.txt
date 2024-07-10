@@ -1,0 +1,9 @@
+streamlit
+numpy
+junicorn
+joblib
+pandas
+matplotlib
+Pillow
+nltk
+tensorflow==2.15.0
