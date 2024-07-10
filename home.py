@@ -24,10 +24,10 @@ Module 3: An ensemble Machine Learning (Random Forest) Model for scan Electrocar
 """)
 
 
-chat = st.Page("chatbot.py", title="Chatbot", icon=":images/chatbot-speech-bubble.png:")
-scan = st.Page("scan.py", title="Scan", icon=":images/radiology (1).png:")
-ecg = st.Page("ecg.py", title="ECG Scan", icon=":images/heart-rate (1).png:")
-mbti = st.Page("mbti.py", title="mbti", icon=":images/personality.png:")
+chat = st.Page("chatbot.py", title="Chatbot", icon=":material/smart_toy:")
+scan = st.Page("scan.py", title="Scan", icon=":material/radiology:")
+ecg = st.Page("ecg.py", title="ECG Scan", icon=":material/ecg_heart:")
+mbti = st.Page("mbti.py", title="mbti", icon=":material/psychology:")
 
 # scan = st.link_button("Scan","https://icarescan2.streamlit.app/")
 # chat = st.link_button("Chatbot","https://carolinebot.streamlit.app/")
