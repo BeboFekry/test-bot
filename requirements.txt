@@ -1,7 +1,0 @@
-requests
-numpy
-tensorflow==2.15.0
-flask
-gunicorn
-joblib
-Pillow
